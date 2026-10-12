@@ -1,0 +1,25 @@
+book.toml
+  s_1cd58c8c2e7a25::t_5de260e54049fb 10,13
+js/presentation.js
+  s_1cd58c8c2e7a25::t_4d5c3001bc9020 1-246
+theme/css/presentation.css
+  s_1cd58c8c2e7a25::t_6a8e5cf8bbd6ef 1-169
+theme/index.hbs
+  s_1cd58c8c2e7a25::t_771749f324b256 74,172-174
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "46d22da605280513a4f9c71e834110f6d47ded79",
+  "prompts": {},
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
