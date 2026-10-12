@@ -1,0 +1,169 @@
+/* Mode présentation (voir js/presentation.js) */
+
+.presentation #mdbook-sidebar,
+.presentation #mdbook-menu-bar,
+.presentation #mdbook-menu-bar-hover-placeholder,
+.presentation .nav-wrapper,
+.presentation .nav-wide-wrapper,
+.presentation .presentation-hidden {
+    display: none !important;
+}
+
+.presentation body {
+    overflow: hidden;
+}
+
+.presentation #mdbook-page-wrapper {
+    margin-inline-start: 0 !important;
+    transform: none !important;
+}
+
+.presentation #mdbook-content {
+    padding: 0;
+}
+
+.presentation #mdbook-content main {
+    box-sizing: border-box;
+    position: fixed;
+    inset: 0;
+    width: min(1400px, 92vw);
+    max-width: none;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 64px 32px 48px;
+    overflow-y: auto;
+    font-size: calc(clamp(18px, 1.55vw, 32px) * var(--presentation-scale, 1));
+    line-height: 1.5;
+}
+
+.presentation #mdbook-content main.presentation-title-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.presentation main.presentation-title-slide h1,
+.presentation main.presentation-title-slide h2,
+.presentation main.presentation-title-slide h3,
+.presentation main.presentation-title-slide h4 {
+    font-size: 2.6em;
+    margin: 0;
+}
+
+.presentation main h1 { font-size: 2.2em; }
+.presentation main h2 { font-size: 1.8em; }
+.presentation main h3 { font-size: 1.5em; }
+.presentation main h4 { font-size: 1.3em; }
+
+.presentation main h1,
+.presentation main h2,
+.presentation main h3,
+.presentation main h4 {
+    margin-top: 0;
+}
+
+.presentation main :is(h1, h2, h3, h4) a.header {
+    color: var(--links);
+}
+
+.presentation main pre,
+.presentation main code {
+    font-size: 0.85em;
+}
+
+.presentation main pre code {
+    font-size: 1em;
+}
+
+.presentation main img {
+    max-height: 70vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Slide image : une seule image, centrée et agrandie */
+.presentation #mdbook-content main.presentation-image-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.presentation main.presentation-image-slide p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0;
+}
+
+.presentation main.presentation-image-slide img {
+    width: auto;
+    height: 80vh;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+}
+
+/* Image accompagnée de son titre : on garde la place du titre */
+.presentation main.presentation-image-slide :is(h1, h2, h3, h4):not(.presentation-hidden) ~ p img {
+    height: 68vh;
+}
+
+.presentation main pre.mermaid svg {
+    max-height: 55vh;
+    width: auto;
+}
+
+.presentation main table {
+    font-size: 0.85em;
+}
+
+.presentation-hud {
+    display: none;
+}
+
+.presentation .presentation-hud {
+    display: block;
+}
+
+.presentation-progress {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--quote-bg);
+    z-index: 100;
+}
+
+.presentation-progress-bar {
+    height: 100%;
+    width: 0;
+    background: var(--links);
+    transition: width 0.2s ease;
+}
+
+.presentation-context,
+.presentation-counter {
+    position: fixed;
+    z-index: 100;
+    font-size: 1.4rem;
+    color: var(--sidebar-fg);
+}
+
+.presentation-context {
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.presentation-counter {
+    bottom: 1rem;
+    right: 1.5rem;
+}
+
+@media print {
+    .presentation-hud {
+        display: none !important;
+    }
+}
