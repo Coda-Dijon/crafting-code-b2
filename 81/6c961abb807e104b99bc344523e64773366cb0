@@ -1,0 +1,20 @@
+02.code-quality/IDENTIFY_TESTS.md
+  h_0a88d9aba8622a 1-329
+02.code-quality/IDENTIFY_TESTS_SOLUTION.md
+  h_0a88d9aba8622a 1-78
+02.code-quality/README.md
+  h_0a88d9aba8622a 1-139
+SUMMARY.md
+  h_0a88d9aba8622a 7-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "816c961abb807e104b99bc344523e64773366cb0",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
