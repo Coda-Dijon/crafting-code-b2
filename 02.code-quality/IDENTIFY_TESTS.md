@@ -327,3 +327,13 @@ describe('estYams — non-régression bug #412', () => {
 | F       | ?            | ?                |
 | G       | ?            | ?                |
 | H       | ?            | ?                |
+
+Types de test à identifier :
+- Test de performance (Performance Test / Benchmark)
+- Test de non-régression (Regression Test)
+- Test unitaire 
+- Test d'intégration (Integration Test — narrow)
+- Test unitaire avec doublure de test 
+- Test End-to-End (E2E Test)
+- Test d'intégration (Integration Test — broad)
+- Test de snapshot
