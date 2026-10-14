@@ -1,0 +1,44 @@
+04.code-review/README.md
+  h_0a88d9aba8622a 1-237
+05.unit-tests/README.md
+  h_0a88d9aba8622a 1-187
+05.unit-tests/csharp/UnitTestIntro.sln
+  h_0a88d9aba8622a 1-27
+05.unit-tests/csharp/UnitTestsIntro.Tests/CalculatorShould.cs
+  h_0a88d9aba8622a 1-12
+05.unit-tests/csharp/UnitTestsIntro.Tests/UnitTestsIntro.Tests.csproj
+  h_0a88d9aba8622a 1-25
+05.unit-tests/csharp/UnitTestsIntro/Calculator.cs
+  h_0a88d9aba8622a 1-22
+05.unit-tests/csharp/UnitTestsIntro/TimeUtility.cs
+  h_0a88d9aba8622a 1-17
+05.unit-tests/csharp/UnitTestsIntro/UnitTestsIntro.csproj
+  h_0a88d9aba8622a 1-10
+05.unit-tests/csharp/how-to.md
+  h_0a88d9aba8622a 1-63
+05.unit-tests/csharp/step-by-step.md
+  h_0a88d9aba8622a 1-297
+05.unit-tests/java/how-to.md
+  h_0a88d9aba8622a 1-95
+05.unit-tests/java/pom.xml
+  h_0a88d9aba8622a 1-60
+05.unit-tests/java/src/main/java/unit/tests/intro/Calculator.java
+  h_0a88d9aba8622a 1-26
+05.unit-tests/java/src/main/java/unit/tests/intro/TimeUtility.java
+  h_0a88d9aba8622a 1-18
+05.unit-tests/java/src/test/java/CalculatorTests.java
+  h_0a88d9aba8622a 1-10
+05.unit-tests/java/step-by-step.md
+  h_0a88d9aba8622a 1-283
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f4ac717c6ae811f461a37e65f387253cc0000c78",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
