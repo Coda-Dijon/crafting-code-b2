@@ -1,0 +1,74 @@
+02.code-quality/IDENTIFY_TESTS.md
+  h_0a88d9aba8622a 330-339
+03.pair-programming/README.md
+  h_0a88d9aba8622a 1-151
+03.pair-programming/yatzy/YATZY.md
+  h_0a88d9aba8622a 1-10
+03.pair-programming/yatzy/csharp/Yatzy.Test/Yatzy.Test.csproj
+  h_0a88d9aba8622a 1-22
+03.pair-programming/yatzy/csharp/Yatzy.Test/YatzyTest.cs
+  h_0a88d9aba8622a 1-127
+03.pair-programming/yatzy/csharp/Yatzy.sln
+  h_0a88d9aba8622a 1-31
+03.pair-programming/yatzy/csharp/Yatzy/Yatzy.cs
+  h_0a88d9aba8622a 1-243
+03.pair-programming/yatzy/csharp/Yatzy/Yatzy.csproj
+  h_0a88d9aba8622a 1-7
+03.pair-programming/yatzy/java/.editorconfig
+  h_0a88d9aba8622a 1-2
+03.pair-programming/yatzy/java/pom.xml
+  h_0a88d9aba8622a 1-33
+03.pair-programming/yatzy/java/src/main/java/Yatzy.java
+  h_0a88d9aba8622a 1-241
+03.pair-programming/yatzy/java/src/test/java/YatzyTest.java
+  h_0a88d9aba8622a 1-110
+03.pair-programming/yatzy/php/README.md
+  h_0a88d9aba8622a 1-129
+03.pair-programming/yatzy/php/cc.bat
+  h_0a88d9aba8622a 1
+03.pair-programming/yatzy/php/composer.json
+  h_0a88d9aba8622a 1-35
+03.pair-programming/yatzy/php/composer.lock
+  h_0a88d9aba8622a 1-6303
+03.pair-programming/yatzy/php/ecs.php
+  h_0a88d9aba8622a 1-35
+03.pair-programming/yatzy/php/fc.bat
+  h_0a88d9aba8622a 1
+03.pair-programming/yatzy/php/phpstan.neon
+  h_0a88d9aba8622a 1-11
+03.pair-programming/yatzy/php/phpunit.xml.dist
+  h_0a88d9aba8622a 1-13
+03.pair-programming/yatzy/php/ps.bat
+  h_0a88d9aba8622a 1
+03.pair-programming/yatzy/php/pu.bat
+  h_0a88d9aba8622a 1
+03.pair-programming/yatzy/php/src/Yatzy.php
+  h_0a88d9aba8622a 1-242
+03.pair-programming/yatzy/php/tests/YatzyTest.php
+  h_0a88d9aba8622a 1-110
+03.pair-programming/yatzy/ts/README.md
+  h_0a88d9aba8622a 1-22
+03.pair-programming/yatzy/ts/package-lock.json
+  h_0a88d9aba8622a 1-1112
+03.pair-programming/yatzy/ts/package.json
+  h_0a88d9aba8622a 1-22
+03.pair-programming/yatzy/ts/src/Yatzy.ts
+  h_0a88d9aba8622a 1-197
+03.pair-programming/yatzy/ts/test/Yatzy.test.ts
+  h_0a88d9aba8622a 1-119
+03.pair-programming/yatzy/ts/tsconfig.json
+  h_0a88d9aba8622a 1-17
+SUMMARY.md
+  h_0a88d9aba8622a 9-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "083f9b3fa7a94c012fdda1b77cde2bf30e49510c",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
