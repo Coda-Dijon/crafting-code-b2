@@ -1,0 +1,40 @@
+06.parameterized-tests/README.md
+  h_0a88d9aba8622a 1-308
+06.parameterized-tests/csharp/ParameterizedTests.Tests/CalculatorShould.cs
+  h_0a88d9aba8622a 1-78
+06.parameterized-tests/csharp/ParameterizedTests.Tests/ParameterizedTests.Tests.csproj
+  h_0a88d9aba8622a 1-29
+06.parameterized-tests/csharp/ParameterizedTests.sln
+  h_0a88d9aba8622a 1-28
+06.parameterized-tests/csharp/ParameterizedTests/Calculator.cs
+  h_0a88d9aba8622a 1-24
+06.parameterized-tests/csharp/ParameterizedTests/ParameterizedTests.csproj
+  h_0a88d9aba8622a 1-9
+06.parameterized-tests/csharp/ParameterizedTests/TimeUtility.cs
+  h_0a88d9aba8622a 1-17
+06.parameterized-tests/java/how-to.md
+  h_0a88d9aba8622a 1-38
+06.parameterized-tests/java/pom.xml
+  h_0a88d9aba8622a 1-61
+06.parameterized-tests/java/src/main/java/parameterized/tests/intro/Calculator.java
+  h_0a88d9aba8622a 1-26
+06.parameterized-tests/java/src/main/java/parameterized/tests/intro/TimeUtility.java
+  h_0a88d9aba8622a 1-15
+06.parameterized-tests/java/src/test/java/CalculatorShould.java
+  h_0a88d9aba8622a 1-71
+06.parameterized-tests/step-by-step.md
+  h_0a88d9aba8622a 1-152
+SUMMARY.md
+  h_0a88d9aba8622a 18-29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "71a8ce9e4ac290253809d8418ef249c28c12f2de",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
