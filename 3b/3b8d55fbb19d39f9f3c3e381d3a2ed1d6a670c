@@ -1,0 +1,115 @@
+SUMMARY.md
+  h_0a88d9aba8622a 30
+  h_0a88d9aba8622a 29
+07.test-doubles/README.md
+  h_0a88d9aba8622a 1-389
+07.test-doubles/csharp/Dummy/Calculator.cs
+  h_0a88d9aba8622a 1-12
+07.test-doubles/csharp/Dummy/DummyTests.cs
+  h_0a88d9aba8622a 1-22
+07.test-doubles/csharp/Fake/Client.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Fake/FakeNotifier.cs
+  h_0a88d9aba8622a 1-15
+07.test-doubles/csharp/Fake/FakeTests.cs
+  h_0a88d9aba8622a 1-34
+07.test-doubles/csharp/Fake/INotifier.cs
+  h_0a88d9aba8622a 1-7
+07.test-doubles/csharp/Fake/ScenarioReceived.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Fake/ScenarioReceivedEventHandler.cs
+  h_0a88d9aba8622a 1-22
+07.test-doubles/csharp/Mock/Client.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Mock/INotifier.cs
+  h_0a88d9aba8622a 1-7
+07.test-doubles/csharp/Mock/MockNotifier.cs
+  h_0a88d9aba8622a 1-17
+07.test-doubles/csharp/Mock/MockTests.cs
+  h_0a88d9aba8622a 1-30
+07.test-doubles/csharp/Mock/ScenarioReceived.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Mock/ScenarioReceivedEventHandler.cs
+  h_0a88d9aba8622a 1-22
+07.test-doubles/csharp/Spy/CreateAJokeUseCase.cs
+  h_0a88d9aba8622a 1-18
+07.test-doubles/csharp/Spy/CreateJokeRequest.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Spy/IJokeRepository.cs
+  h_0a88d9aba8622a 1-9
+07.test-doubles/csharp/Spy/Joke.cs
+  h_0a88d9aba8622a 1-4
+07.test-doubles/csharp/Spy/SpyJokeRepository.cs
+  h_0a88d9aba8622a 1-21
+07.test-doubles/csharp/Spy/SpyTests.cs
+  h_0a88d9aba8622a 1-24
+07.test-doubles/csharp/Stub/AllowAccessAuthorizer.cs
+  h_0a88d9aba8622a 1-7
+07.test-doubles/csharp/Stub/Calculator.cs
+  h_0a88d9aba8622a 1-27
+07.test-doubles/csharp/Stub/DenyAccessAuthorizer.cs
+  h_0a88d9aba8622a 1-7
+07.test-doubles/csharp/Stub/IAuthorizer.cs
+  h_0a88d9aba8622a 1-7
+07.test-doubles/csharp/Stub/StubTests.cs
+  h_0a88d9aba8622a 1-31
+07.test-doubles/csharp/TestDoubles.csproj
+  h_0a88d9aba8622a 1-27
+07.test-doubles/csharp/TestDoubles.sln
+  h_0a88d9aba8622a 1-16
+07.test-doubles/java/pom.xml
+  h_0a88d9aba8622a 1-55
+07.test-doubles/java/src/main/java/dummy/Calculator.java
+  h_0a88d9aba8622a 1-10
+07.test-doubles/java/src/main/java/fake/Client.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/fake/FakeNotifier.java
+  h_0a88d9aba8622a 1-17
+07.test-doubles/java/src/main/java/fake/Notifier.java
+  h_0a88d9aba8622a 1-5
+07.test-doubles/java/src/main/java/fake/ScenarioReceived.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/fake/ScenarioReceivedEventHandler.java
+  h_0a88d9aba8622a 1-17
+07.test-doubles/java/src/main/java/mock/Client.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/mock/Notifier.java
+  h_0a88d9aba8622a 1-5
+07.test-doubles/java/src/main/java/mock/ScenarioReceived.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/mock/ScenarioReceivedEventHandler.java
+  h_0a88d9aba8622a 1-17
+07.test-doubles/java/src/main/java/spy/CreateAJokeUseCase.java
+  h_0a88d9aba8622a 1-13
+07.test-doubles/java/src/main/java/spy/CreateJokeRequest.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/spy/Joke.java
+  h_0a88d9aba8622a 1-3
+07.test-doubles/java/src/main/java/spy/JokeRepository.java
+  h_0a88d9aba8622a 1-5
+07.test-doubles/java/src/main/java/stub/Authorizer.java
+  h_0a88d9aba8622a 1-5
+07.test-doubles/java/src/main/java/stub/Calculator.java
+  h_0a88d9aba8622a 1-19
+07.test-doubles/java/src/test/java/DummyTests.java
+  h_0a88d9aba8622a 1-19
+07.test-doubles/java/src/test/java/FakeTests.java
+  h_0a88d9aba8622a 1-29
+07.test-doubles/java/src/test/java/MockTests.java
+  h_0a88d9aba8622a 1-43
+07.test-doubles/java/src/test/java/SpyTests.java
+  h_0a88d9aba8622a 1-41
+07.test-doubles/java/src/test/java/StubTests.java
+  h_0a88d9aba8622a 1-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3b3b8d55fbb19d39f9f3c3e381d3a2ed1d6a670c",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
