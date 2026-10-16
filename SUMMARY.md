@@ -28,3 +28,5 @@
   - [Java exercises](06.parameterized-tests/java/how-to.md)
   - [Step-by-step](06.parameterized-tests/step-by-step.md)
 - [Test Doubles](07.test-doubles/README.md)
+- [Clean Tests](08.clean-tests/README.md)
+  - [Solution Anti-Patterns](08.clean-tests/ANTI-PATTERNS.md)
