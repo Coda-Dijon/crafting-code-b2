@@ -1,0 +1,129 @@
+SUMMARY.md
+  h_0a88d9aba8622a 31-32
+  h_0a88d9aba8622a 30
+08.clean-tests/ANTI-PATTERNS.md
+  h_0a88d9aba8622a 1-249
+08.clean-tests/README.md
+  h_0a88d9aba8622a 1-187
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/BlogTests.cs
+  h_0a88d9aba8622a 1-83
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/PriceEngineTests.cs
+  h_0a88d9aba8622a 1-19
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/Solution/BlogShould.cs
+  h_0a88d9aba8622a 1-79
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/Solution/PriceEngineTests.cs
+  h_0a88d9aba8622a 1-18
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/Solution/TodoTests.cs
+  h_0a88d9aba8622a 1-34
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/AntiPatterns/TodoTests.cs
+  h_0a88d9aba8622a 1-34
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/CleanTests.Tests.csproj
+  h_0a88d9aba8622a 1-30
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/DemoTests.cs
+  h_0a88d9aba8622a 1-13
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/LanguageExtExtensions.cs
+  h_0a88d9aba8622a 1-20
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/Schools/ClassicalCustomerTests.cs
+  h_0a88d9aba8622a 1-50
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/Schools/LondonCustomerTests.cs
+  h_0a88d9aba8622a 1-52
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/Styles/CommunicationBasedTests.cs
+  h_0a88d9aba8622a 1-42
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/Styles/OutputBasedTests.cs
+  h_0a88d9aba8622a 1-21
+08.clean-tests/anti-patterns/csharp/CleanTests.Tests/Styles/StateBasedTests.cs
+  h_0a88d9aba8622a 1-39
+08.clean-tests/anti-patterns/csharp/CleanTests.sln
+  h_0a88d9aba8622a 1-22
+08.clean-tests/anti-patterns/csharp/CleanTests/Blog/Article.cs
+  h_0a88d9aba8622a 1-31
+08.clean-tests/anti-patterns/csharp/CleanTests/Blog/Comment.cs
+  h_0a88d9aba8622a 1-3
+08.clean-tests/anti-patterns/csharp/CleanTests/Blog/ValidationError.cs
+  h_0a88d9aba8622a 1-3
+08.clean-tests/anti-patterns/csharp/CleanTests/CleanTests.csproj
+  h_0a88d9aba8622a 1-13
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/CustomerService.cs
+  h_0a88d9aba8622a 1-14
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/IStore.cs
+  h_0a88d9aba8622a 1-10
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/PriceEngine.cs
+  h_0a88d9aba8622a 1-10
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/Product.cs
+  h_0a88d9aba8622a 1-3
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/ProductType.cs
+  h_0a88d9aba8622a 1-7
+08.clean-tests/anti-patterns/csharp/CleanTests/Customer/Store.cs
+  h_0a88d9aba8622a 1-28
+08.clean-tests/anti-patterns/csharp/CleanTests/Demo.cs
+  h_0a88d9aba8622a 1-7
+08.clean-tests/anti-patterns/csharp/CleanTests/ToDo/ITodoRepository.cs
+  h_0a88d9aba8622a 1-8
+08.clean-tests/anti-patterns/csharp/CleanTests/ToDo/Todo.cs
+  h_0a88d9aba8622a 1-3
+08.clean-tests/anti-patterns/csharp/CleanTests/ToDo/TodoService.cs
+  h_0a88d9aba8622a 1-16
+08.clean-tests/anti-patterns/java/pom.xml
+  h_0a88d9aba8622a 1-82
+08.clean-tests/anti-patterns/java/src/main/java/Demo.java
+  h_0a88d9aba8622a 1-11
+08.clean-tests/anti-patterns/java/src/main/java/blog/Article.java
+  h_0a88d9aba8622a 1-41
+08.clean-tests/anti-patterns/java/src/main/java/blog/Comment.java
+  h_0a88d9aba8622a 1-12
+08.clean-tests/anti-patterns/java/src/main/java/blog/ValidationError.java
+  h_0a88d9aba8622a 1-8
+08.clean-tests/anti-patterns/java/src/main/java/customer/CustomerService.java
+  h_0a88d9aba8622a 1-20
+08.clean-tests/anti-patterns/java/src/main/java/customer/PriceEngine.java
+  h_0a88d9aba8622a 1-14
+08.clean-tests/anti-patterns/java/src/main/java/customer/Product.java
+  h_0a88d9aba8622a 1-8
+08.clean-tests/anti-patterns/java/src/main/java/customer/ProductType.java
+  h_0a88d9aba8622a 1-6
+08.clean-tests/anti-patterns/java/src/main/java/customer/Store.java
+  h_0a88d9aba8622a 1-29
+08.clean-tests/anti-patterns/java/src/main/java/todo/Todo.java
+  h_0a88d9aba8622a 1-9
+08.clean-tests/anti-patterns/java/src/main/java/todo/TodoRepository.java
+  h_0a88d9aba8622a 1-7
+08.clean-tests/anti-patterns/java/src/main/java/todo/TodoService.java
+  h_0a88d9aba8622a 1-14
+08.clean-tests/anti-patterns/java/src/test/java/DemoTests.java
+  h_0a88d9aba8622a 1-10
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/BlogTests.java
+  h_0a88d9aba8622a 1-76
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/PriceEngineTests.java
+  h_0a88d9aba8622a 1-20
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/TodoTests.java
+  h_0a88d9aba8622a 1-33
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/solution/Blog_should.java
+  h_0a88d9aba8622a 1-74
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/solution/PriceEngineRefactoredTests.java
+  h_0a88d9aba8622a 1-20
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/solution/TodoRefactoredTests.java
+  h_0a88d9aba8622a 1-33
+08.clean-tests/anti-patterns/java/src/test/java/antipatterns/solution/step-by-step.md
+  h_0a88d9aba8622a 1-507
+08.clean-tests/anti-patterns/java/src/test/java/customer/solution/ClassicalCustomerTests.java
+  h_0a88d9aba8622a 1-30
+08.clean-tests/anti-patterns/java/src/test/java/customer/solution/LondonCustomerTests.java
+  h_0a88d9aba8622a 1-39
+08.clean-tests/anti-patterns/java/src/test/java/styles/CommunicationBasedTests.java
+  h_0a88d9aba8622a 1-36
+08.clean-tests/anti-patterns/java/src/test/java/styles/OutputBasedTests.java
+  h_0a88d9aba8622a 1-22
+08.clean-tests/anti-patterns/java/src/test/java/styles/StateBasedTests.java
+  h_0a88d9aba8622a 1-43
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2bf32097b6b53057e6ba72fa3d61a9180a80648",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
