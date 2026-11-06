@@ -1,0 +1,92 @@
+.github/workflows/slides.yml
+  s_1cd58c8c2e7a25::t_c34715553deb97 1-2,8-16,20,22-23,25-26,28-33,35-38,40-46,48-49,52,54,57,59-62
+.gitignore
+  s_1cd58c8c2e7a25::t_8baf3caad561b5 1-4,67,69,149-152
+01.craft/slides.md
+  s_1cd58c8c2e7a25::t_4941d74424cb14 1-5,7,9,11,13,15,17,19-175,184,186-187,189,191,193,195-196,198,200-202,204-205,207,209-212,214-215,217-219,221,223-224,226,228-243,245,247-248,250-252,254,256,258,260,262,264-267,269
+02.code-quality/slides.md
+  s_1cd58c8c2e7a25::t_5ace8b623a37cd 1-5,7,9,11,13,15,17-18,20-22,24,26,28,30,32,34-35,37,39-44,46-47,49,51-55,57-58,60,62-64,66-67,69,71,73,75,77-78,80,82-83,85,87-188,192-242,244-245,247,249-250,252,254,256,258,260,262
+03.pair-programming/exercices/yatzy/README.md
+  s_1cd58c8c2e7a25::t_b503b05211dcd2 8
+03.pair-programming/slides.md
+  s_1cd58c8c2e7a25::t_54baf07cdd6dcf 1-5,7,9,11,13-44,47,50-53,55-59,63,71-75,77-78,80,82-85,93,96-101,103,105-108,112-147,149-150,152,154,156-157,159,161,163-164,166,168,170-201,206,208-211,214-256,259-266,268,270-271,273,275-277,279-296,300,304-311,313-315
+04.code-review/exercices/code-avengers/README.md
+  s_1cd58c8c2e7a25::t_676128b02c15aa 1,3,7,9,13,27,30,36-38,44,51,53,57,60,64,66,69,73
+04.code-review/slides.md
+  s_1cd58c8c2e7a25::t_a066370040780b 1-336
+05.unit-tests/exercices/test-it-or-die-trying/README.md
+  s_1cd58c8c2e7a25::t_ed86d3890cba41 1-11
+05.unit-tests/exercices/test-it-or-die-trying/csharp/README.md
+  s_1cd58c8c2e7a25::t_9efd9c68b6e926 35
+05.unit-tests/exercices/test-it-or-die-trying/java/README.md
+  s_1cd58c8c2e7a25::t_937685b9a7b52c 55
+05.unit-tests/slides.md
+  s_1cd58c8c2e7a25::t_ff7f7145a291ea 1-11,13,15,17-19,22-25,27-29,31,33-58,66-70,85-86,90-92,94-95,97,99,102,111-114,116,119,131-141,143-145,148,151-152,156-161,163-165,178-179,182-187,189,191-192,194-201,203-204,206-227,235,238-241,243-244,260-294,297-351,353,355,359-371,373
+06.parameterized-tests/exercices/test-it-or-die-trying/README.md
+  s_1cd58c8c2e7a25::t_2d0ed97235b50f 39-40
+06.parameterized-tests/slides.md
+  s_1cd58c8c2e7a25::t_675448f529ca48 1-9,11-13,15-18,36,47-50,53-54,56-57,61,63,71,75-80,89,94-95,102-105,109-111,113-116,132-133,135,137,151-154,158,160-162,184-186,188-189,192,195-196,198-199,201-202,204-205,210-213,216,219-222,232-233,235,237,239,243-246,262-265,271-274,279-280,282,284,286,314-345,347,349,352,355,357-359
+07.test-doubles/exercices/mockito/README.md
+  s_1cd58c8c2e7a25::t_75024b186fc27a 1-28
+07.test-doubles/exercices/mockito/SOLUTION.md
+  s_1cd58c8c2e7a25::t_2b39c9dc9fb062 1-65
+07.test-doubles/slides.md
+  s_1cd58c8c2e7a25::t_3e125deabf1517 1-20,24-35,37,39-40,42-44,46,48,50-58,62-64,66-67,69,71,73,75,77,79,81-82,84-87,91-93,95-101,105-107,109,117,123-125,129,135,146-149,151,155-156,172-173,175-178,180,188-190,195-200,204-206,210-211,226-229,231,241-244,246-247,250,252,254-257,273-276,278,287-288,294-298,301-303,307-308,325,327-330,332-333,340-341,348-350,353-360,362,364-365,367,369-370,374,376,378-381,395-396,398,400-402,404,406-407,409,413,415,417-419,421,423-425
+08.clean-tests/exercices/anti-patterns/README.md
+  s_1cd58c8c2e7a25::t_34d75be5ac2e4f 1-12
+08.clean-tests/exercices/anti-patterns/SOLUTION.md
+  s_1cd58c8c2e7a25::t_5f2b803b209328 1
+08.clean-tests/slides.md
+  s_1cd58c8c2e7a25::t_994d4fd052d884 1-61,65-67,70-72,77-80,82-83,85-91,97,99-102,104,106,108,110-111,113,115-116,118-123,125-126,128-141,146-148,152-178,180-181,183-187,189-190,192,194,196,198,200-201,203-204,206-213,216-217,223-226,228-232,239,242-244,246,248,250-253,255,257-259,261-284,288,290,292-293
+components/Exercise.vue
+  s_1cd58c8c2e7a25::t_33b40643997b1e 1-15
+package.json
+  s_1cd58c8c2e7a25::t_8aeb5a13034af1 1-18
+setup/mermaid.ts
+  s_1cd58c8c2e7a25::t_bc4f0c3e568966 1-11
+slides.md
+  s_1cd58c8c2e7a25::t_72cd06081f0606 1-139
+theme/global-top.vue
+  s_1cd58c8c2e7a25::t_ea20715b8d8eb4 1-23
+theme/layouts/center.vue
+  s_1cd58c8c2e7a25::t_8807a77d8cb390 1-11
+theme/layouts/cover.vue
+  s_1cd58c8c2e7a25::t_7a4db68401ac28 1-17
+theme/layouts/default.vue
+  s_1cd58c8c2e7a25::t_1be3ed1f28d575 1-9
+theme/layouts/section.vue
+  s_1cd58c8c2e7a25::t_4278a4b7c60618 1-14
+theme/layouts/statement.vue
+  s_1cd58c8c2e7a25::t_1d73e799b57195 1-12
+theme/package.json
+  s_1cd58c8c2e7a25::t_4fb5c6054e2c86 1-9
+theme/styles/components.css
+  s_1cd58c8c2e7a25::t_0762e94796df7b 1-1995
+theme/styles/course.css
+  s_1cd58c8c2e7a25::t_1711b28d75d209 1-36,38-39,42-45,48-49,52-77,80-81,84-85,88-89,92-161,163-167,170-173,176-181,184-185,188-189,192-193,196-198,201-202,205-207,210-212,215-225,228-229,232-236,239-246,249-254,257-260,263-266,269-273,276-278
+theme/styles/index.ts
+  s_1cd58c8c2e7a25::t_529cd2ebcb0e27 1-5
+theme/styles/signal.css
+  s_1cd58c8c2e7a25::t_3feaa4711901d3 1-48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a25885c095127b46b3983fa5572b7f9230ff366f",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
