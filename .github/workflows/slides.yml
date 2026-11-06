@@ -1,0 +1,69 @@
+name: Publish Slides
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # URL publique du site : la base des slides (/crafting-code-b2/) en est déduite
+  SITE_URL: https://coda-dijon.github.io/crafting-code-b2
+  # Dépôt vers lequel pointent les encarts « Exercice » des slides
+  VITE_REPO_URL: https://github.com/${{ github.repository }}
+
+jobs:
+  build:
+    name: Build slides
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build slides
+        run: |
+          BASE_PATH="$(echo "$SITE_URL" | sed -E 's#^https?://[^/]+##; s#/*$##')/"
+          echo "Base : $BASE_PATH"
+          npm run build -- --base "$BASE_PATH"
+
+      # Les URL des slides (/crafting-code-b2/12) doivent retomber sur l'app
+      - name: Add SPA fallback
+        run: cp dist/index.html dist/404.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

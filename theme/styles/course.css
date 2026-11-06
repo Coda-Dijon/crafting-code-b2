@@ -1,0 +1,279 @@
+/*
+ * Taille du texte du cours : plus dense que le talk (beaucoup de contenu par slide)
+ */
+.slidev-layout {
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.slidev-layout h1 {
+  font-size: 42px;
+}
+
+.slidev-layout h2 {
+  font-size: 30px;
+}
+
+.slidev-layout h3 {
+  font-size: 20px;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  max-width: 70ch;
+}
+
+.gc-section h1 {
+  font-size: 46px;
+}
+
+.gc-statement h1 {
+  font-size: 56px;
+}
+
+.gc-statement p {
+  font-size: 26px;
+}
+
+.gc-section p {
+  font-size: 22px;
+}
+
+/* Couverture : le personnage du cours à droite */
+.slidev-layout.gc-cover.cover-hero {
+  grid-template-columns: 1fr 560px;
+  gap: 32px;
+}
+
+.cover-hero h1 {
+  font-size: 84px;
+}
+
+.cover-hero .subtitle {
+  font-size: 22px;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.cover-hero .media {
+  width: 560px;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 740 / 500;
+  align-self: center;
+  border: none;
+  object-fit: contain;
+}
+
+/*
+ * Éléments Markdown génériques du cours (tableaux, citations, code, listes, images),
+ * dans le style Signal. Aucune couleur hors variables.
+ */
+
+/* Listes */
+.slidev-layout ul,
+.slidev-layout ol {
+  margin: 0.4em 0;
+  padding-left: 1.3em;
+}
+
+.slidev-layout ul {
+  list-style: square;
+}
+
+.slidev-layout ol {
+  list-style: decimal;
+}
+
+.slidev-layout li {
+  margin: 0.2em 0;
+}
+
+.slidev-layout li > ul,
+.slidev-layout li > ol {
+  margin: 0.1em 0;
+}
+
+.slidev-layout p {
+  margin: 0.5em 0;
+}
+
+/* Tableaux Markdown : la grille Signal */
+.slidev-layout table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 4px solid var(--line);
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0.6em 0;
+}
+
+.slidev-layout th,
+.slidev-layout td {
+  border: 2px solid var(--line);
+  padding: 6px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.slidev-layout th {
+  font-weight: 700;
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+/* Citations Markdown */
+.slidev-layout blockquote {
+  border-left: 6px solid var(--fg);
+  padding: 2px 0 2px 18px;
+  margin: 0.7em 0;
+  background: none;
+  color: var(--fg);
+}
+
+.slidev-layout blockquote p {
+  margin: 0.2em 0;
+  max-width: none;
+}
+
+/* Code */
+.slidev-layout :not(pre) > code {
+  font-size: 0.9em;
+  border: 1.5px solid var(--line);
+  padding: 0 0.25em;
+  background: none;
+  color: var(--fg);
+}
+
+.slidev-layout pre,
+.slidev-layout .slidev-code {
+  font-size: 14px;
+  line-height: 1.45;
+  border: 3px solid var(--line);
+  border-radius: 0;
+  padding: 12px 16px;
+  margin: 0.6em 0;
+}
+
+.slidev-layout pre code {
+  border: none;
+  padding: 0;
+}
+
+/* Images : jamais plus hautes que la slide */
+.slidev-layout img {
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+.slidev-layout img.full {
+  max-height: 440px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Colonnes */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.cols--wide-left {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.cols--wide-right {
+  grid-template-columns: 1fr 1.4fr;
+}
+
+.cols > div > :first-child {
+  margin-top: 0;
+}
+
+/* Texte dense : slides de référence (tableaux longs, corrections) */
+.dense {
+  font-size: 17px;
+}
+
+.dense table {
+  font-size: 15px;
+}
+
+.dense th,
+.dense td {
+  padding: 4px 10px;
+}
+
+.dense pre,
+.dense .slidev-code {
+  font-size: 13px;
+}
+
+/* Lien vers un exercice */
+.exercise {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 4px solid var(--line);
+  background: var(--hl);
+  color: var(--onhl);
+  padding: 14px 20px;
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.exercise a {
+  color: var(--onhl);
+}
+
+.exercise__tag {
+  font-family: var(--mono);
+  font-size: 15px;
+  border: 2px solid var(--onhl);
+  padding: 2px 8px;
+}
+
+/* Durée d'une activité */
+.timer {
+  font-family: var(--mono);
+  font-size: 16px;
+  border: 2px solid var(--line);
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Post-its de l'Example Mapping */
+.em-legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 8px 0 16px;
+}
+
+.em-legend span {
+  border: 3px solid var(--line);
+  padding: 4px 12px;
+  font-weight: 600;
+}
+
+/* Diagrammes Mermaid : jamais plus hauts que la zone de contenu */
+.slidev-layout .mermaid {
+  display: flex;
+  justify-content: center;
+}
+
+.slidev-layout .mermaid svg {
+  max-height: 400px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Slide sans titre (layout center) : l'image prend toute la hauteur */
+.gc-center img.full {
+  max-height: 560px;
+}
