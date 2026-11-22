@@ -1,0 +1,26 @@
+09.integraton-tests/exercices/grades-api/README.md
+  s_1cd58c8c2e7a25::t_94e3e17a7da586 1-18
+09.integraton-tests/slides.md
+  s_1cd58c8c2e7a25::t_a671a304f1d827 1-286
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "89da864abbbb2ec2195a3066541ac398a4ba304b",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
