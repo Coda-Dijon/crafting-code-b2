@@ -46,7 +46,7 @@ Ouvrez `withMock/GradeControllerTest.java` et implémentez les 3 tests suivants 
 
 // Injecter les collaborateurs
 @Autowired MockMvc mockMvc;
-@MockBean  GradeService gradeService;
+@MockitoBean GradeService gradeService; // remplace @MockBean, déprécié
 
 // Configurer le mock (BDDMockito)
 given(gradeService.getGrades("alice", "math", "exam1"))
@@ -80,6 +80,7 @@ Implémentez les 3 mêmes cas, mais cette fois avec `@SpringBootTest` :
 ```java
 // Annoter la classe
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureRestTestClient
 
 // Substituer le repository par le Fake (dans une inner class statique)
 @TestConfiguration
@@ -89,8 +90,8 @@ static class Config {
 }
 
 // Injecter les collaborateurs
-@Autowired TestRestTemplate restTemplate;
-@Autowired GradeRepository  gradeRepository; // injecte le Fake
+@Autowired RestTestClient  client;
+@Autowired GradeRepository gradeRepository; // injecte le Fake
 
 // Nettoyer l'état entre chaque test
 @BeforeEach
@@ -99,12 +100,23 @@ void setUp() { ((FakeGradeRepository) gradeRepository).clear(); }
 // Pré-charger des données
 gradeRepository.save(new Grade("alice", "math", "exam1", 18.0));
 
-// Effectuer une requête
-var response = restTemplate.getForEntity(
-    "/students/alice/grades?subject=math&assignment=exam1",
-    Grade[].class);
+// Effectuer une requête et vérifier la réponse
+var grades = client.get()
+    .uri("/students/alice/grades?subject=math&assignment=exam1")
+    .exchange()
+    .expectStatus().isOk()
+    .expectBody(Grade[].class)
+    .returnResult().getResponseBody();
 
-assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+assertThat(grades).hasSize(1);
+
+// Envoyer un corps JSON
+client.post()
+    .uri("/students/bob/grades")
+    .contentType(APPLICATION_JSON)
+    .body(new GradeRequest("math", "exam1", 14.5))
+    .exchange()
+    .expectStatus().isCreated();
 ```
 
 > Never trust a test that you have not seen failed

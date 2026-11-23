@@ -79,12 +79,12 @@ class: dense
 
 <span class="kicker">Concepts · approche 1</span>
 
-# Avec un mock : `@WebMvcTest` + `@MockBean`
+# Avec un mock : `@WebMvcTest` + `@MockitoBean`
 
 <div class="cols">
 <div>
 
-`@WebMvcTest` charge uniquement la couche HTTP. Les autres composants sont fournis via `@MockBean`.
+`@WebMvcTest` charge uniquement la couche HTTP. Les autres composants sont remplacés par des mocks via `@MockitoBean` (qui remplace `@MockBean`, déprécié depuis Spring Boot 3.4).
 
 ```mermaid {scale: 0.7}
 graph TB
@@ -104,7 +104,7 @@ graph TB
 @WebMvcTest(GradeController.class)
 class GradeControllerTest {
     @Autowired MockMvc mockMvc;
-    @MockBean  GradeService gradeService;
+    @MockitoBean GradeService gradeService;
 
     @Test
     void shouldReturn200WithGradesWhenFound() throws Exception {
@@ -199,29 +199,29 @@ class: dense
 
 ```java
 @SpringBootTest(webEnvironment = RANDOM_PORT)
+@AutoConfigureRestTestClient
 class GradeApiTest {
-    @Autowired TestRestTemplate restTemplate;
-    @Autowired GradeRepository  gradeRepository;
+    @Autowired RestTestClient  client;
+    @Autowired GradeRepository gradeRepository;
 
     @TestConfiguration
     static class Config {
         @Bean @Primary
         GradeRepository gradeRepository() { return new FakeGradeRepository(); }
     }
-
     @BeforeEach
     void setUp() { ((FakeGradeRepository) gradeRepository).clear(); }
-
     @Test
     void shouldReturnGradesForStudent() {
         gradeRepository.save(new Grade("alice", "math", "exam1", 18.0));
 
-        var response = restTemplate.getForEntity(
-            "/students/alice/grades?subject=math&assignment=exam1", Grade[].class);
+        var grades = client.get().uri("/students/alice/grades?subject=math&assignment=exam1")
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody(Grade[].class).returnResult().getResponseBody();
 
-        assertThat(response.getStatusCode()).isEqualTo(OK);
-        assertThat(response.getBody()).hasSize(1);
-        assertThat(response.getBody()[0].value()).isEqualTo(18.0);
+        assertThat(grades).hasSize(1);
+        assertThat(grades[0].value()).isEqualTo(18.0);
     }
 }
 ```
@@ -261,7 +261,7 @@ class GradeApiTest {
 
 Écrivez les tests d'intégration de l'API selon les deux approches :
 
-1. **Avec un mock** : `@WebMvcTest` + `@MockBean` (ou son équivalent ASP.NET Core en C#)
+1. **Avec un mock** : `@WebMvcTest` + `@MockitoBean` (ou son équivalent ASP.NET Core en C#)
 2. **Avec un fake** : `@SpringBootTest` + `FakeGradeRepository`
 
 > Que se passe-t-il si le contrat de `GradeRepository` change ? Lequel de vos deux jeux de tests le détecte ?

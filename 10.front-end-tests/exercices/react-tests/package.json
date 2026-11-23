@@ -10,10 +10,10 @@
     "preview": "vite preview",
     "test:unit": "vitest run",
     "test:unit:watch": "vitest",
-    "test:e2e": "playwright test --ignore=tests/accessibility",
+    "test:e2e": "playwright test tests/components tests/integration tests/e2e",
     "test:e2e:headed": "playwright test tests/e2e --headed",
     "test:accessibility": "playwright test tests/accessibility",
-    "test": "vitest run && playwright test --ignore=tests/accessibility",
+    "test": "vitest run && playwright test tests/components tests/integration tests/e2e",
     "recorder": "vite & npx playwright codegen http://localhost:3001/"
   },
   "dependencies": {

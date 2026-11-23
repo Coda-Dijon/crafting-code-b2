@@ -481,6 +481,122 @@ Une violation donne la règle enfreinte (`id`), son `impact` (`critical` > `seri
 <Exercise path="10.front-end-tests/exercices/react-tests" />
 
 ---
+
+<span class="kicker">Pratique concrète · en binôme</span>
+
+# Green Craft : le manifeste en FR et en EN
+
+<div class="cols">
+<div>
+
+Un projet Playwright à part, qui teste le site en ligne [green-craft.fr](https://green-craft.fr/).
+
+1. Lancez `npm test` : les 3 scénarios passent ?
+2. Retirez `test.use({ locale: 'fr-FR' })` et relancez : que se passe-t-il ? Pourquoi ?
+
+</div>
+<div v-click>
+
+3. Ajoutez le scénario retour : du manifeste **anglais** au **français**. Avez-vous touché aux Page Objects ?
+4. Enregistrez un parcours avec `npm run recorder` (par exemple « Explorer les valeurs en détail »)
+5. Révisez le code généré : **sélecteurs ARIA** uniquement, puis extrayez une `ValuesPage`
+
+> Un E2E sur un site en ligne est un **smoke test** : il vérifie qu'un parcours clé est vivant, pas chaque règle.
+
+</div>
+</div>
+
+<Exercise path="10.front-end-tests/exercices/green-craft-e2e" />
+
+---
+class: dense
+---
+
+<span class="kicker">Concepts · Page Object Model</span>
+
+# Un E2E sur un site en ligne : le manifeste Green Craft
+
+<div class="cols">
+<div>
+
+Valider que le manifeste de [green-craft.fr](https://green-craft.fr/) est accessible **en français et en anglais**.
+
+- Un **projet à part** : `baseURL` en ligne, pas de `webServer` local
+- Une **`locale`** fixée : le site choisit sa langue selon le navigateur
+- Un **Page Object par page**, paramétré par la langue
+- Les libellés par langue sont dans **`languages.ts`** : un seul endroit à modifier
+
+> Un test qui dépend du réseau et d'un site tiers peut échouer sans que votre code change : gardez-le **hors** de la suite principale.
+
+</div>
+<div v-click>
+
+```ts
+// tests/pages/ManifestoPage.ts
+export class ManifestoPage {
+    readonly title: Locator;
+    readonly url: RegExp;
+    private readonly switchLanguageLink: Locator;
+
+    constructor(private readonly page: Page,
+                private readonly language: Language) {
+        const texts = languages[language];
+        this.title = page.getByRole('heading',
+            { name: texts.manifestoTitle });
+        this.url = texts.manifestoUrl;
+        this.switchLanguageLink = page.getByRole('link',
+            { name: texts.switchLanguageLink });
+    }
+
+    async switchLanguage(): Promise<ManifestoPage> {
+        await this.switchLanguageLink.click();
+        return new ManifestoPage(this.page,
+            otherLanguage(this.language));
+    }
+}
+```
+
+</div>
+</div>
+
+---
+
+<span class="kicker">Concepts · Page Object Model</span>
+
+# Le test exprime l'intention
+
+<div class="cols cols--wide-left">
+<div>
+
+```ts
+// tests/manifesto.spec.ts
+test.describe('Manifeste Green Craft en français', () => {
+    test.use({ locale: languages.fr.locale });
+
+    test('on peut passer du manifeste français au manifeste anglais',
+        async ({ page }) => {
+        const frenchManifesto = new ManifestoPage(page, 'fr');
+        await frenchManifesto.goto();
+
+        const englishManifesto = await frenchManifesto.switchLanguage();
+
+        await expect(page).toHaveURL(englishManifesto.url);
+        await expect(englishManifesto.title).toBeVisible();
+    });
+});
+```
+
+</div>
+<div v-click>
+
+- Aucun libellé, aucune URL, aucun sélecteur dans le test
+- Une action qui change de page **retourne le Page Object suivant**
+- Les **assertions restent dans le test** : le Page Object expose des `Locator`, il ne vérifie rien
+
+</div>
+</div>
+
+---
 class: dense
 ---
 

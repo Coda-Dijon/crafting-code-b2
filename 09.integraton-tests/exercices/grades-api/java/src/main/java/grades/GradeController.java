@@ -12,7 +12,7 @@ import java.util.List;
 @Tag(name = "Grades", description = "Gestion des notes étudiantes")
 @RestController
 @RequestMapping("/students/{studentId}/grades")
-class GradeController {
+public class GradeController {
 
     private final GradeService gradeService;
 

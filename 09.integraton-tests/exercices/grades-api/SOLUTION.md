@@ -19,11 +19,11 @@ On utilise un contexte partiel (`@WebMvcTest` en Java, `WebApplicationFactory` +
 @WebMvcTest(GradeController.class)  // (1) charge uniquement la couche HTTP
 class GradeControllerTest {
     @Autowired MockMvc mockMvc;         // (2) client HTTP de test
-    @MockBean  GradeService gradeService; // (3) remplace le vrai service
+    @MockitoBean GradeService gradeService; // (3) remplace le vrai service
 ```
 
 - `@WebMvcTest` démarre un contexte Spring minimal : controllers, filtres, sérialisation JSON. Rien d'autre.
-- `@MockBean` crée un mock Mockito et l'enregistre dans le contexte Spring à la place du vrai bean.
+- `@MockitoBean` crée un mock Mockito et l'enregistre dans le contexte Spring à la place du vrai bean. Il remplace `@MockBean`, déprécié depuis Spring Boot 3.4 et supprimé dans Spring Boot 4.
 
 ---
 
@@ -110,8 +110,8 @@ import grades.GradeRequest;
 import grades.GradeService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
@@ -130,7 +130,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class GradeControllerTest {
 
     @Autowired MockMvc mockMvc;
-    @MockBean  GradeService gradeService;
+    @MockitoBean GradeService gradeService;
 
     @Test
     void shouldReturn200WithGradesWhenFound() throws Exception {
@@ -375,12 +375,13 @@ On charge le contexte complet (`@SpringBootTest` / `WebApplicationFactory`) mais
 
 ```java
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // (1) contexte complet
+@AutoConfigureRestTestClient // (2) configure un RestTestClient pointant sur le serveur démarré
 class GradeApiTest {
 
-    @Autowired TestRestTemplate restTemplate;   // (2) client HTTP de test
-    @Autowired GradeRepository  gradeRepository; // (3) injectera le Fake
+    @Autowired RestTestClient  client;          // (3) client HTTP de test
+    @Autowired GradeRepository gradeRepository; // (4) injectera le Fake
 
-    @TestConfiguration // (4) surcharge la DI uniquement pendant les tests
+    @TestConfiguration // (5) surcharge la DI uniquement pendant les tests
     static class Config {
         @Bean @Primary // @Primary pour prendre la priorité sur InMemoryGradeRepository
         GradeRepository gradeRepository() { return new FakeGradeRepository(); }
@@ -388,11 +389,12 @@ class GradeApiTest {
 
     @BeforeEach
     void setUp() {
-        ((FakeGradeRepository) gradeRepository).clear(); // (5) état propre avant chaque test
+        ((FakeGradeRepository) gradeRepository).clear(); // (6) état propre avant chaque test
     }
 ```
 
 - `RANDOM_PORT` : démarre un vrai serveur HTTP sur un port aléatoire, évite les conflits.
+- `RestTestClient` (Spring Framework 7) remplace `TestRestTemplate`, déprécié dans Spring Boot 4.
 - `@TestConfiguration` est une classe interne statique — Spring la découvre automatiquement.
 - Le cast `(FakeGradeRepository)` est nécessaire car `clear()` n'est pas sur l'interface.
 
@@ -406,20 +408,23 @@ class GradeApiTest {
         // Arrange : on écrit directement dans le Fake (pas de mock à programmer)
         gradeRepository.save(new Grade("alice", "math", "exam1", 18.0));
 
-        // Act
-        var response = restTemplate.getForEntity(
-            "/students/alice/grades?subject=math&assignment=exam1",
-            Grade[].class); // on désérialise en tableau
+        // Act : on envoie la requête, on vérifie le statut et on récupère le corps
+        var grades = client.get()
+            .uri("/students/alice/grades?subject=math&assignment=exam1")
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody(Grade[].class) // on désérialise en tableau
+            .returnResult()
+            .getResponseBody();
 
         // Assert
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).hasSize(1);
-        assertThat(response.getBody()[0].value()).isEqualTo(18.0);
+        assertThat(grades).hasSize(1);
+        assertThat(grades[0].value()).isEqualTo(18.0);
     }
 ```
 
 - On pré-charge les données via `gradeRepository.save(...)` — pas de `given(...).willReturn(...)`.
-- `Grade[].class` : `TestRestTemplate` désérialise en tableau (pas en `List` directement).
+- `expectStatus()` vérifie le statut HTTP, `expectBody(...)` désérialise le corps JSON.
 
 ---
 
@@ -430,13 +435,11 @@ class GradeApiTest {
     void shouldReturn404WhenNoGradesFound() {
         // Arrange : Fake vide (setUp l'a nettoyé), rien à préparer
 
-        // Act
-        var response = restTemplate.getForEntity(
-            "/students/unknown/grades?subject=math&assignment=exam1",
-            Object.class);
-
-        // Assert
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        // Act & Assert
+        client.get()
+            .uri("/students/unknown/grades?subject=math&assignment=exam1")
+            .exchange()
+            .expectStatus().isNotFound();
     }
 ```
 
@@ -452,12 +455,13 @@ class GradeApiTest {
         // Arrange
         var request = new GradeRequest("math", "exam1", 14.5);
 
-        // Act
-        var response = restTemplate.postForEntity(
-            "/students/bob/grades", request, Void.class);
-
-        // Assert : status HTTP
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+        // Act & Assert : status HTTP
+        client.post()
+            .uri("/students/bob/grades")
+            .contentType(APPLICATION_JSON)
+            .body(request)
+            .exchange()
+            .expectStatus().isCreated();
 
         // Assert : persistance réelle via le Fake (pas un verify de mock)
         assertThat(gradeRepository.findBy("bob", "math", "exam1")).hasSize(1);
@@ -479,20 +483,22 @@ import grades.GradeRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureRestTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
-import org.springframework.http.HttpStatus;
+import org.springframework.test.web.servlet.client.RestTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.http.MediaType.APPLICATION_JSON;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureRestTestClient
 class GradeApiTest {
 
-    @Autowired TestRestTemplate restTemplate;
-    @Autowired GradeRepository  gradeRepository;
+    @Autowired RestTestClient client;
+    @Autowired GradeRepository gradeRepository;
 
     @TestConfiguration
     static class Config {
@@ -509,31 +515,37 @@ class GradeApiTest {
     void shouldReturnGradesForStudent() {
         gradeRepository.save(new Grade("alice", "math", "exam1", 18.0));
 
-        var response = restTemplate.getForEntity(
-            "/students/alice/grades?subject=math&assignment=exam1",
-            Grade[].class);
+        var grades = client.get()
+            .uri("/students/alice/grades?subject=math&assignment=exam1")
+            .exchange()
+            .expectStatus().isOk()
+            .expectBody(Grade[].class)
+            .returnResult()
+            .getResponseBody();
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(response.getBody()).hasSize(1);
-        assertThat(response.getBody()[0].value()).isEqualTo(18.0);
+        assertThat(grades).hasSize(1);
+        assertThat(grades[0].value()).isEqualTo(18.0);
     }
 
     @Test
     void shouldReturn404WhenNoGradesFound() {
-        var response = restTemplate.getForEntity(
-            "/students/unknown/grades?subject=math&assignment=exam1",
-            Object.class);
-
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+        client.get()
+            .uri("/students/unknown/grades?subject=math&assignment=exam1")
+            .exchange()
+            .expectStatus().isNotFound();
     }
 
     @Test
     void shouldPersistGradeWhenCreated() {
         var request = new GradeRequest("math", "exam1", 14.5);
 
-        var response = restTemplate.postForEntity("/students/bob/grades", request, Void.class);
+        client.post()
+            .uri("/students/bob/grades")
+            .contentType(APPLICATION_JSON)
+            .body(request)
+            .exchange()
+            .expectStatus().isCreated();
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
         assertThat(gradeRepository.findBy("bob", "math", "exam1")).hasSize(1);
     }
 }

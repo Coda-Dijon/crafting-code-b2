@@ -5,9 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.fail;
 
 // TODO: ajouter @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// TODO: ajouter @AutoConfigureRestTestClient
 class GradeApiTest {
 
-    // TODO: @Autowired TestRestTemplate restTemplate;
+    // TODO: @Autowired RestTestClient client;
     // TODO: @Autowired GradeRepository gradeRepository;
 
     // TODO: ajouter @TestConfiguration pour substituer GradeRepository par FakeGradeRepository (@Bean @Primary)

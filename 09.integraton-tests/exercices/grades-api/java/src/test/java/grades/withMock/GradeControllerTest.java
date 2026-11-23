@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class GradeControllerTest {
 
     // TODO: @Autowired MockMvc mockMvc;
-    // TODO: @MockBean  GradeService gradeService;
+    // TODO: @MockitoBean GradeService gradeService;
 
     // Exercice 1 — implémenter les 3 tests suivants :
     //
