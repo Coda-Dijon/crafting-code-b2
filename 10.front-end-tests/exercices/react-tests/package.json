@@ -1,0 +1,41 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e": "playwright test --ignore=tests/accessibility",
+    "test:e2e:headed": "playwright test tests/e2e --headed",
+    "test:accessibility": "playwright test tests/accessibility",
+    "test": "vitest run && playwright test --ignore=tests/accessibility",
+    "recorder": "vite & npx playwright codegen http://localhost:3001/"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.11.3",
+    "@playwright/test": "^1.59.1",
+    "axios": "1.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^25.5.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^5.2.0",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "7.3.2",
+    "vitest": "^4.1.2"
+  }
+}
