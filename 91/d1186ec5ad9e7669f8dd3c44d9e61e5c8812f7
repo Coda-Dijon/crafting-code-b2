@@ -1,0 +1,56 @@
+09.integraton-tests/exercices/grades-api/java/src/main/java/grades/GradeController.java
+  h_0a88d9aba8622a 15
+09.integraton-tests/exercices/grades-api/SOLUTION.md
+  s_1cd58c8c2e7a25::t_395ece38aef73b 22,26,113-114,133,378,381-382,384,392,397,411-418,421-422,427,438-442,458-464,486,491,494,497,500-501,518-524,526-527,532-535,542-547
+09.integraton-tests/exercices/grades-api/java/README.md
+  s_1cd58c8c2e7a25::t_e674fedb5c6311 49,83,93-94,103-119
+09.integraton-tests/exercices/grades-api/java/pom.xml
+  s_1cd58c8c2e7a25::t_59a70f07ddccfd 2-3,10,20-21,27,37-42
+09.integraton-tests/exercices/grades-api/java/src/test/java/grades/withMock/GradeControllerTest.java
+  s_1cd58c8c2e7a25::t_e259c0e50138b6 11
+09.integraton-tests/exercices/grades-api/java/src/test/java/grades/withoutMock/GradeApiTest.java
+  s_1cd58c8c2e7a25::t_d86a61e541edff 8,11
+09.integraton-tests/slides.md
+  s_1cd58c8c2e7a25::t_ae2f77d9a860a4 82,87,107,202,204-205,218-221,223-224,264
+10.front-end-tests/exercices/green-craft-e2e/README.md
+  s_1cd58c8c2e7a25::t_80d60648f3dc86 1-48
+10.front-end-tests/exercices/green-craft-e2e/package-lock.json
+  s_1cd58c8c2e7a25::t_86b29b7e89afe4 1-78
+10.front-end-tests/exercices/green-craft-e2e/package.json
+  s_1cd58c8c2e7a25::t_3ee83d55d22563 1-15
+10.front-end-tests/exercices/green-craft-e2e/playwright.config.ts
+  s_1cd58c8c2e7a25::t_e3cc1685b766d5 1-15
+10.front-end-tests/exercices/green-craft-e2e/tests/manifesto.spec.ts
+  s_1cd58c8c2e7a25::t_a4a79dadc7ab45 1-49
+10.front-end-tests/exercices/green-craft-e2e/tests/pages/HomePage.ts
+  s_1cd58c8c2e7a25::t_e10d806463bb56 1-20
+10.front-end-tests/exercices/green-craft-e2e/tests/pages/ManifestoPage.ts
+  s_1cd58c8c2e7a25::t_e67f5ff0f0f508 1-27
+10.front-end-tests/exercices/green-craft-e2e/tests/pages/languages.ts
+  s_1cd58c8c2e7a25::t_d20b6e128bf798 1-27
+10.front-end-tests/exercices/react-tests/package.json
+  s_1cd58c8c2e7a25::t_06ba345ea1837c 13,16
+10.front-end-tests/slides.md
+  s_1cd58c8c2e7a25::t_7fbe7fde5af3fe 483-598
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "91d1186ec5ad9e7669f8dd3c44d9e61e5c8812f7",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
