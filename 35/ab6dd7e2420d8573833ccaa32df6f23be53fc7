@@ -1,0 +1,77 @@
+09.integraton-tests/exercices/grades-api/java/pom.xml
+  h_0a88d9aba8622a 3,10,21
+  h_0a88d9aba8622a 2
+10.front-end-tests/exercices/react-tests/README.md
+  s_1cd58c8c2e7a25::t_7e9b3478bf304b 1-60
+10.front-end-tests/slides.md
+  s_1cd58c8c2e7a25::t_8fac017bedf48c 1-498
+10.front-end-tests/exercices/react-tests/eslint.config.js
+  h_0a88d9aba8622a 1-28
+10.front-end-tests/exercices/react-tests/index.html
+  h_0a88d9aba8622a 1-13
+10.front-end-tests/exercices/react-tests/package-lock.json
+  h_0a88d9aba8622a 1-4199
+10.front-end-tests/exercices/react-tests/package.json
+  h_0a88d9aba8622a 1-41
+10.front-end-tests/exercices/react-tests/playwright.config.ts
+  h_0a88d9aba8622a 1-18
+10.front-end-tests/exercices/react-tests/src/App.css
+  h_0a88d9aba8622a 1-42
+10.front-end-tests/exercices/react-tests/src/App.tsx
+  h_0a88d9aba8622a 1-46
+10.front-end-tests/exercices/react-tests/src/Form.tsx
+  h_0a88d9aba8622a 1-63
+10.front-end-tests/exercices/react-tests/src/assets/react.svg
+  h_0a88d9aba8622a 1
+10.front-end-tests/exercices/react-tests/src/index.css
+  h_0a88d9aba8622a 1-68
+10.front-end-tests/exercices/react-tests/src/main.tsx
+  h_0a88d9aba8622a 1-10
+10.front-end-tests/exercices/react-tests/src/utils/validation.test.ts
+  h_0a88d9aba8622a 1-49
+10.front-end-tests/exercices/react-tests/src/utils/validation.ts
+  h_0a88d9aba8622a 1-14
+10.front-end-tests/exercices/react-tests/src/vite-env.d.ts
+  h_0a88d9aba8622a 1
+10.front-end-tests/exercices/react-tests/tests/accessibility/a11y.spec.ts
+  h_0a88d9aba8622a 1-41
+10.front-end-tests/exercices/react-tests/tests/components/form.spec.ts
+  h_0a88d9aba8622a 1-36
+10.front-end-tests/exercices/react-tests/tests/e2e/app.spec.ts
+  h_0a88d9aba8622a 1-65
+10.front-end-tests/exercices/react-tests/tests/e2e/recorded.spec.ts
+  h_0a88d9aba8622a 1-15
+10.front-end-tests/exercices/react-tests/tests/integration/form.spec.ts
+  h_0a88d9aba8622a 1-60
+10.front-end-tests/exercices/react-tests/tsconfig.app.json
+  h_0a88d9aba8622a 1-26
+10.front-end-tests/exercices/react-tests/tsconfig.json
+  h_0a88d9aba8622a 1-8
+10.front-end-tests/exercices/react-tests/tsconfig.node.json
+  h_0a88d9aba8622a 1-24
+10.front-end-tests/exercices/react-tests/tsconfig.test.json
+  h_0a88d9aba8622a 1-24
+10.front-end-tests/exercices/react-tests/vite.config.ts
+  h_0a88d9aba8622a 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "35ab6dd7e2420d8573833ccaa32df6f23be53fc7",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
