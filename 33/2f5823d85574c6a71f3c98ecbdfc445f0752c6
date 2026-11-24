@@ -1,0 +1,32 @@
+11.tdd/exercices/bouchonnois/README.md
+  s_1cd58c8c2e7a25::t_1d04e370faf35a 1-16
+11.tdd/exercices/codabuzz/README.md
+  s_1cd58c8c2e7a25::t_74c7367462a68e 1-26
+11.tdd/exercices/mars-rover/README.md
+  s_1cd58c8c2e7a25::t_b9bef4669646fb 1-47
+11.tdd/exercices/roman-numerals/README.md
+  s_1cd58c8c2e7a25::t_101fd53f0f2399 1-25
+11.tdd/slides.md
+  s_1cd58c8c2e7a25::t_7225f554f0ce45 1-456
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "332f5823d85574c6a71f3c98ecbdfc445f0752c6",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_1cd58c8c2e7a25": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2882e1e6-7e43-4856-9c9c-e53bbdda6983",
+        "model": "unknown"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
