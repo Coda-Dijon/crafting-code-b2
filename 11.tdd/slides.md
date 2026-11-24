@@ -282,6 +282,50 @@ Implémentez le scénario et les classes **en générant le code depuis son usag
 <Exercise path="11.tdd/exercices/bouchonnois" />
 
 ---
+class: dense
+---
+
+<span class="kicker">Pratique concrète · code katas</span>
+
+# Stack Kata
+
+<div class="cols">
+<div>
+
+Implémentez une **pile** (LIFO) avec une capacité fixe, sans les collections du langage : `push`, `pop`, `top`, `isEmpty`, `size`.
+
+Prenez les tests **un par un**, dans l'ordre : chacun force l'implémentation à évoluer.
+
+- **Fake it** : `return true` en dur, c'est voulu
+- **Triangulation** : `true` → booléen → compteur → un élément → tableau
+- **Refactor** : le code **et** les tests
+
+> Résistez à l'envie d'écrire la pile complète dès le premier test.
+
+</div>
+<div v-click>
+
+```text
+1.  Une nouvelle pile est vide
+2.  Après un push, la pile n'est pas vide
+3.  Après un push et un pop, la pile est vide
+4.  Après deux push et un pop, elle n'est pas vide
+5.  Push au-delà de la capacité → overflow
+6.  Pop sur une pile vide → underflow
+7.  Après push X, pop retourne X
+8.  Après push X puis Y, pop retourne Y puis X
+9.  top retourne le dernier élément sans le dépiler
+10. top sur une pile vide → underflow
+11. Une capacité négative est refusée
+12. Tout push sur une pile de capacité 0 → overflow
+```
+
+</div>
+</div>
+
+<Exercise path="11.tdd/exercices/stack" />
+
+---
 
 <span class="kicker">Pratique concrète · code katas</span>
 
