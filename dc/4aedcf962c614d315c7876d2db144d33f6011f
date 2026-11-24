@@ -1,0 +1,18 @@
+11.tdd/exercices/stack/README.md
+  h_0a88d9aba8622a 1-51
+11.tdd/exercices/stack/SOLUTION.md
+  h_0a88d9aba8622a 1-348
+11.tdd/slides.md
+  h_0a88d9aba8622a 284-327
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc4aedcf962c614d315c7876d2db144d33f6011f",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
