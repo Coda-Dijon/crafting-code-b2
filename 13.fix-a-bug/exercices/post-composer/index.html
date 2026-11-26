@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coda Social</title>
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+<main>
+    <p class="eyebrow">Crafting Code · Corriger un bug</p>
+    <h1>Coda <mark>Social</mark></h1>
+
+    <form id="composer" aria-label="Nouveau message">
+        <label for="message">Votre message</label>
+        <textarea id="message" rows="5" aria-describedby="counter"></textarea>
+
+        <div class="composer__footer">
+            <p id="counter" role="status" aria-live="polite"></p>
+            <button id="publish" type="submit">Publier</button>
+        </div>
+    </form>
+
+    <h2>Fil d'actualité</h2>
+    <ul id="timeline" aria-label="Messages publiés"></ul>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

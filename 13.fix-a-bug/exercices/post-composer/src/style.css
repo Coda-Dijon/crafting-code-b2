@@ -1,0 +1,170 @@
+/* Thème Signal : les mêmes tokens que les slides du cours (theme/styles/signal.css). */
+@import '@fontsource-variable/lexend';
+@import '@fontsource-variable/atkinson-hyperlegible-mono';
+
+:root {
+    --bg: #FFFFFF;
+    --fg: #0A0A0A;
+    --muted: #333333;
+    --hl: #D9F24F;
+    --onhl: #0A0A0A;
+    --line: #0A0A0A;
+    --font: 'Lexend Variable', sans-serif;
+    --mono: 'Atkinson Hyperlegible Mono Variable', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0A0A0A;
+        --fg: #FFFFFF;
+        --muted: #D6D6D6;
+        --line: #FFFFFF;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);
+    font-size: 18px;
+    line-height: 1.45;
+    letter-spacing: .01em;
+}
+
+main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 48px 16px;
+}
+
+.eyebrow {
+    margin: 0 0 .6em;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+h1 {
+    margin: 0 0 .6em;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 1.6em 0 .6em;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+mark {
+    background: var(--hl);
+    color: var(--onhl);
+    padding: 0 .15em;
+}
+
+form {
+    display: grid;
+    gap: 12px;
+    padding: 18px;
+    border: 4px solid var(--line);
+}
+
+label {
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--line);
+    border-radius: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: inherit;
+    resize: vertical;
+}
+
+:focus-visible {
+    outline: 3px solid var(--fg);
+    outline-offset: 3px;
+}
+
+.composer__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+#counter {
+    margin: 0;
+    padding: 2px 8px;
+    border: 1.5px solid transparent;
+    font-family: var(--mono);
+    font-size: 15px;
+}
+
+#counter[data-state='warning'] {
+    background: var(--hl);
+    color: var(--onhl);
+}
+
+#counter[data-state='error'] {
+    background: var(--fg);
+    color: var(--bg);
+    font-weight: 700;
+}
+
+button {
+    padding: 8px 22px;
+    border: 4px solid var(--line);
+    border-radius: 0;
+    background: var(--hl);
+    color: var(--onhl);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+button:disabled {
+    border-style: dashed;
+    background: transparent;
+    color: var(--muted);
+    cursor: not-allowed;
+}
+
+#timeline {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#timeline li {
+    padding: 14px 18px;
+    border-left: 6px solid var(--fg);
+    overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
